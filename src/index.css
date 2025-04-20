@@ -4,7 +4,6 @@
 @plugin "daisyui" {
   themes: light --default, light --prefersdark;
 }
-
 .plus-jakarta {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
