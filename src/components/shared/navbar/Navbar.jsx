@@ -2,8 +2,8 @@ import { Link, NavLink } from "react-router";
 import logo from "../../../assets/logo.png";
 const Navbar = () => {
   return (
-    <div>
-      <div className=" sticky z-50 top-0  bg-base-200">
+    <div className="lg:sticky z-50 top-0  bg-base-200">
+      <div className="">
         <div className="navbar container mx-auto">
           <div className="navbar-start ">
             <div className="dropdown">
