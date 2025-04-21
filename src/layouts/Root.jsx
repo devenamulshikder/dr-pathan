@@ -7,7 +7,7 @@ const Root = () => {
     <div>
       <Navbar />
       <div className="bg-[#EFEFEF]">
-        <div className="container mx-auto">
+        <div className="container mx-auto p-2 lg:p-6">
         <Outlet />
         </div>
       </div>
