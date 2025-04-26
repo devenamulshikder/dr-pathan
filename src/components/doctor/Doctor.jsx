@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 /* eslint-disable no-unused-vars */
 const Doctor = ({ doctor }) => {
   const {
@@ -28,20 +29,26 @@ const Doctor = ({ doctor }) => {
           </p>
         </div>
         <div className="card-body ml-3">
-          <h2 className="text-[#0F0F0F] text-lg lg:text-2xl font-bold">
+          <h2 className="text-[#0F0F0F] text-xl lg:text-2xl font-bold">
             {name}
           </h2>
-          <p>
-            A card component has a figure, a body part, and inside body there
-            are title and actions parts
-          </p>
-          <div className="">
-            <button className="btn btn-primary">Buy Now</button>
+          <p className="lg:text-lg text-[#0F0F0F99]">{education}</p>
+          <div className="border border-[#0f0f0f24] border-dashed"></div>
+          <div className="flex gap-2 text-[#0F0F0FB2]">
+            <h1 className="text-3xl">&#174;</h1>
+            <h1 className="mt-1">{registration_number}</h1>
           </div>
+          <Link>
+            <button className="rounded-full w-full px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border font-medium border-[#176AE5] text-[#176AE5]">
+              <span className="absolute w-full h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#176AE5] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+              <span className="relative text-[#176AE5] transition duration-300 group-hover:text-white ease font-semibold text-lg">
+                View Details
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 };
-
 export default Doctor;
