@@ -5,7 +5,7 @@ import img4 from "../../assets/success-staffs.png";
 import CountUp from "react-countup";
 const MedicalService = () => {
   return (
-    <div>
+    <div className="mb-5 lg:mb-20">
       <h1 className="text-2xl lg:text-5xl font-bold text-[#0F0F0F] text-center">
         We Provide Best Medical Services{" "}
       </h1>
