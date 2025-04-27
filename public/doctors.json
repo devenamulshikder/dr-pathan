@@ -10,11 +10,11 @@
       "registration_number": "DMC/12345/2012",
       "designation": "Senior Consultant",
       "workplace": "Apollo Hospitals, New Delhi",
-      "fee": "$80"
+      "fee": "80"
     },
     {
       "id": 2,
-      "available": "Available",
+      "available": "No-Available",
       "image_url": "https://i.postimg.cc/zfcjsvDz/portrait-hansome-young-male-doctor-man.jpg",
       "name": "Dr. Raj Mehta",
       "education": "MBBS, MS (Orthopedics)",
@@ -23,7 +23,7 @@
       "registration_number": "MMC/87654/2010",
       "designation": "Chief Orthopedic Surgeon",
       "workplace": "Fortis Hospital, Mumbai",
-      "fee": "$100"
+      "fee": "100"
     },
     {
       "id": 3,
@@ -36,11 +36,11 @@
       "registration_number": "AMC/34567/2014",
       "designation": "Consultant Pediatrician",
       "workplace": "Children's Health Center, Chicago",
-      "fee": "$70"
+      "fee": "70"
     },
     {
       "id": 4,
-      "available": "Available",
+      "available": "No-Available",
       "image_url": "https://i.postimg.cc/6pzzhzDG/smiling-doctor-with-strethoscope-isolated-grey.jpg",
       "name": "Dr. John Kim",
       "education": "MBBS, DM (Neurology)",
@@ -49,7 +49,7 @@
       "registration_number": "CMC/23456/2005",
       "designation": "Head Neurology Department",
       "workplace": "Mayo Clinic, Minnesota",
-      "fee": "$150"
+      "fee": "150"
     },
     {
       "id": 5,
@@ -62,7 +62,7 @@
       "registration_number": "TMC/65432/2013",
       "designation": "Senior Gynecologist",
       "workplace": "Cloudnine Hospital, Bangalore",
-      "fee": "$90"
+      "fee": "90"
     },
     {
       "id": 6,
@@ -75,11 +75,11 @@
       "registration_number": "KMC/78901/2016",
       "designation": "Consultant Dermatologist",
       "workplace": "Skin Care Clinic, Los Angeles",
-      "fee": "$75"
+      "fee": "75"
     },
     {
       "id": 7,
-      "available": "Available",
+      "available": "No-Available",
       "image_url": "https://i.postimg.cc/GmbqY6SC/nappy-9a-Bs-Cd9-Fvgc-unsplash.jpg",
       "name": "Dr. Sarah Lopez",
       "education": "MBBS, MS (ENT)",
@@ -88,7 +88,7 @@
       "registration_number": "MMC/99887/2011",
       "designation": "ENT Consultant",
       "workplace": "Metro ENT Center, Houston",
-      "fee": "$85"
+      "fee": "85"
     },
     {
       "id": 8,
@@ -101,7 +101,7 @@
       "registration_number": "PMC/11223/2009",
       "designation": "Senior Gastroenterologist",
       "workplace": "Medanta Hospital, Gurgaon",
-      "fee": "$110"
+      "fee": "110"
     },
     {
       "id": 9,
@@ -114,11 +114,11 @@
       "registration_number": "NYMC/55678/2015",
       "designation": "Mental Health Specialist",
       "workplace": "MindCare Center, New York",
-      "fee": "$95"
+      "fee": "95"
     },
     {
       "id": 10,
-      "available": "Available",
+      "available": "No-Available",
       "image_url": "https://i.postimg.cc/DZ4gnhmq/usman-yousaf-p-Trhfmj2j-DA-unsplash.jpg",
       "name": "Dr. Hassan Al-Fayed",
       "education": "MBBS, MS (Urology)",
@@ -127,7 +127,7 @@
       "registration_number": "GMC/33445/2011",
       "designation": "Consultant Urologist",
       "workplace": "King’s Hospital, London",
-      "fee": "$120"
+      "fee": "120"
     },
     {
       "id": 11,
@@ -140,7 +140,7 @@
       "registration_number": "SMC/77654/2012",
       "designation": "Endocrine Specialist",
       "workplace": "Harmony Health, Singapore",
-      "fee": "$105"
+      "fee": "105"
     },
     {
       "id": 12,
@@ -153,7 +153,7 @@
       "registration_number": "LMC/88776/2008",
       "designation": "Senior General Surgeon",
       "workplace": "City Hospital, Los Angeles",
-      "fee": "$130"
+      "fee": "130"
     }
   ]
   

@@ -35,10 +35,10 @@ const Doctor = ({ doctor }) => {
           <p className="lg:text-lg text-[#0F0F0F99]">{education}</p>
           <div className="border border-[#0f0f0f24] border-dashed"></div>
           <div className="flex gap-2 text-[#0F0F0FB2]">
-            <h1 className="text-3xl">&#174;</h1>
-            <h1 className="mt-1">{registration_number}</h1>
+            <h1 className="text-4xl">&#174;</h1>
+            <h1 className="mt-1 font-semibold">Reg No: {registration_number}</h1>
           </div>
-          <Link>
+          <Link to={`/doctorDetails/${id}`}>
             <button className="rounded-full w-full px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border font-medium border-[#176AE5] text-[#176AE5]">
               <span className="absolute w-full h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#176AE5] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
               <span className="relative text-[#176AE5] transition duration-300 group-hover:text-white ease font-semibold text-lg">
