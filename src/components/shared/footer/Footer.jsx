@@ -1,6 +1,5 @@
 import logo from "../../../assets/logo.png";
 import FooterNav from "../navbar/FooterNav";
-
 import fb from "../../../assets/fb.png";
 import linkedin from "../../../assets/linkedin.png";
 import twitter from "../../../assets/twitter.png";

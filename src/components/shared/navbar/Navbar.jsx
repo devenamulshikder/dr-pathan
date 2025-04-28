@@ -61,7 +61,6 @@ const Navbar = () => {
                 >
                   Blogs
                 </NavLink>
-
                 <NavLink
                   to="/55"
                   className={({ isActive }) =>
@@ -110,7 +109,6 @@ const Navbar = () => {
               >
                 Blogs
               </NavLink>
-
               <NavLink
                 to="/55"
                 className={({ isActive }) =>

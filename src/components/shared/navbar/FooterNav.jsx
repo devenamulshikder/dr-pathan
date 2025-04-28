@@ -37,7 +37,6 @@ const FooterNav = () => {
               >
                 Blogs
               </NavLink>
-
               <NavLink
                 to="/55"
                 className={({ isActive }) =>

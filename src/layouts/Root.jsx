@@ -2,7 +2,6 @@ import { Outlet, useNavigation } from "react-router";
 import Navbar from "../components/shared/navbar/Navbar";
 import Footer from "../components/shared/footer/Footer";
 import Loader from "../components/shared/loader/Loader";
-
 const Root = () => {
   const navigation = useNavigation();
   return (

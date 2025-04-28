@@ -3,11 +3,9 @@ import { Link, useLoaderData } from "react-router";
 import { getStoredDoctor } from "../../utilities/addToLS";
 import Recharts from "../../components/recharts/Recharts";
 import toast from "react-hot-toast";
-
 const MyBookings = () => {
   const [doctorAppintment, setDoctorAppintment] = useState([]);
   const data = useLoaderData();
-
   useEffect(() => {
     let storedAppointments = getStoredDoctor();
     let convertedStoredAppointments = storedAppointments.map((storedId) =>
@@ -18,7 +16,6 @@ const MyBookings = () => {
     );
     setDoctorAppintment(myAppointments);
   }, [data]);
-
   const handleRemove = (id) => {
     let storedAppointments = getStoredDoctor();
     let updatedAppointments = storedAppointments.filter(

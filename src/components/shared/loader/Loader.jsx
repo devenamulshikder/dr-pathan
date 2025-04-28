@@ -1,7 +1,7 @@
 import './loader.css'
 const Loader = () => {
   return (
-    <div>
+    <div className='flex justify-center items-center min-h-screen'>
       <div className="dot-spinner">
         <div className="dot-spinner__dot"></div>
         <div className="dot-spinner__dot"></div>

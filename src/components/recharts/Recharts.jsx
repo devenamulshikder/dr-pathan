@@ -26,7 +26,6 @@ const colors = [
   "#ff6f61", // Coral
 ];
 
-// Custom triangle bar shape
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}
     C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
@@ -41,7 +40,6 @@ const TriangleBar = (props) => {
 };
 
 const Recharts = ({ doctorAppintment }) => {
-  // Transform the incoming appointments data for Recharts
   const chartData = doctorAppintment?.map((doctor) => ({
     name: doctor.name,
     fee: doctor.fee,
@@ -49,7 +47,7 @@ const Recharts = ({ doctorAppintment }) => {
 
   return (
     <div className="p-4 bg-white rounded-lg  border border-gray-200 mx-auto">
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={450}>
         <BarChart
           data={chartData}
           margin={{
@@ -59,23 +57,20 @@ const Recharts = ({ doctorAppintment }) => {
             bottom: 5,
           }}
         >
-          {/* Dashed grid lines */}
           <CartesianGrid stroke="#e5e7eb" strokeDasharray="5 5" />
-          {/* X-axis with category names */}
+        
           <XAxis
             dataKey="name"
             tick={{ fontSize: 12, fill: "#6b7280" }}
             tickLine={false}
             axisLine={{ stroke: "#e5e7eb" }}
           />
-          {/* Y-axis with numerical values */}
           <YAxis
             tick={{ fontSize: 12, fill: "#6b7280" }}
             tickLine={false}
             axisLine={{ stroke: "#e5e7eb" }}
             domain={[0, 150]}
           />
-          {/* Tooltip with Tailwind styling */}
           <Tooltip
             contentStyle={{
               backgroundColor: "#ffffff",
@@ -86,7 +81,6 @@ const Recharts = ({ doctorAppintment }) => {
             }}
             cursor={{ fill: "rgba(0, 0, 0, 0.05)" }}
           />
-          {/* Triangular bars with custom colors */}
           <Bar
             dataKey="fee"
             shape={<TriangleBar />}
