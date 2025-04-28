@@ -42,7 +42,7 @@ const Navbar = () => {
                   Home
                 </NavLink>
                 <NavLink
-                  to="/55"
+                  to="/myBooking"
                   className={({ isActive }) =>
                     isActive
                       ? "btn text-[#176AE5] font-bold lg:text-lg hover:bg-[#1769e52d] lg:border-b-2 border-0"
@@ -91,7 +91,7 @@ const Navbar = () => {
                 Home
               </NavLink>
               <NavLink
-                to="/55"
+                to="/myBooking"
                 className={({ isActive }) =>
                   isActive
                     ? "btn btn-outline text-[#176AE5] font-bold lg:text-lg hover:bg-[#1769e52d] lg:border-b-2 border-0"
