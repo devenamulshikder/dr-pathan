@@ -10,12 +10,12 @@ const getStoredDoctor = () => {
 const addToStoredLS = (id) => {
   const storedDoctorData = getStoredDoctor();
   if (storedDoctorData.includes(id)) {
-    toast.error('Already Booked this Appointment!');
+    toast.error("Already Booked this Appointment!");
   } else {
     storedDoctorData.push(id);
-    const data = JSON.stringify(storedDoctorData)
-    localStorage.setItem('doctors',data);
-    toast.success('You Booked Successfully this Appointment!');
+    const data = JSON.stringify(storedDoctorData);
+    localStorage.setItem("doctors", data);
+    toast.success("You Booked Successfully this Appointment!");
   }
 };
 export { addToStoredLS, getStoredDoctor };

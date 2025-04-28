@@ -1,14 +1,12 @@
 import { OctagonAlert } from "lucide-react";
-import { Link, useLoaderData, useParams } from "react-router";
-import { addToStoredLS } from "../../utilities/addToLS";
+import toast from "react-hot-toast";
+import { Link, useLoaderData, useParams, useNavigate } from "react-router";
 
 const DoctorDetails = () => {
   const { id: urlId } = useParams();
   const doctorsData = useLoaderData();
   const doctorsId = parseInt(urlId);
-
   const singleDoctor = doctorsData.find((doctor) => doctor.id === doctorsId);
-
   const {
     fee,
     workplace,
@@ -17,11 +15,29 @@ const DoctorDetails = () => {
     education,
     name,
     available,
+    availability,
     image_url,
   } = singleDoctor;
-
+  const navigate = useNavigate();
+  const getStoredDoctor = () => {
+    const storedDoctorStr = localStorage.getItem("doctors");
+    if (storedDoctorStr) {
+      return JSON.parse(storedDoctorStr);
+    } else {
+      return [];
+    }
+  };
   const handleAddToLS = (id) => {
-    addToStoredLS(id);
+    const storedDoctorData = getStoredDoctor();
+    if (storedDoctorData.includes(id)) {
+      toast.error(`Already Booked ${name} Appointment!`);
+    } else {
+      storedDoctorData.push(id);
+      const data = JSON.stringify(storedDoctorData);
+      localStorage.setItem("doctors", data);
+      toast.success(`You Booked Successfully ${name} Appointment!`);
+      navigate("/myBooking");
+    }
   };
 
   return (
@@ -42,26 +58,50 @@ const DoctorDetails = () => {
       <div className="bg-[#fff] rounded-2xl p-4 lg:p-10">
         <div className="flex flex-col lg:flex-row gap-5 lg:gap-20">
           <div>
-            <img src={image_url} className="w-full lg:max-w-sm rounded-lg shadow-2xl" />
+            <img
+              src={image_url}
+              className="w-full lg:max-w-sm rounded-lg shadow-2xl"
+            />
           </div>
           <div>
             <h1 className="text-2xl lg:text-4xl font-bold">{name}</h1>
             <p className="py-2 text-[#0F0F0F99]">{education}</p>
             <p className="text-[#0F0F0F99]">
               Work at <br />
-              <small className="text-lg font-bold text-[#0F0F0F]">{workplace}</small>
+              <small className="text-lg font-bold text-[#0F0F0F]">
+                {workplace}
+              </small>
             </p>
             <div className="border border-dashed border-[#0f0f0f58] my-2 w-full lg:w-2xl"></div>
 
             <div className="flex gap-2 text-[#0F0F0FB2]">
               <h1 className="text-4xl">&#174;</h1>
-              <h1 className="mt-0.5 font-semibold">Reg No: {registration_number}</h1>
+              <h1 className="mt-0.5 font-semibold">
+                Reg No: {registration_number}
+              </h1>
             </div>
 
             <div className="border border-dashed border-[#0f0f0f58] mb-2 w-full lg:w-2xl"></div>
 
             <div>
-              <h1 className="text-[#0F0F0] font-semibold">Availability</h1>
+              <h1 className="text-[#0F0F0] font-semibold">
+                Availability :
+                <span className="bg-[#FFA0001A] text-[#FFA000] py-1 border px-2 rounded-full">
+                  {availability[0]}
+                </span>
+                <span className="bg-[#FFA0001A] text-[#FFA000] py-1 border px-2 rounded-full mx-2">
+                  {availability[1]}
+                </span>
+                <span
+                  className={
+                    availability[2]
+                      ? `bg-[#FFA0001A] text-[#FFA000] py-1 border px-2 rounded-full`
+                      : ""
+                  }
+                >
+                  {availability[2]}
+                </span>
+              </h1>
             </div>
             <div>
               <h1 className="text-[#0F0F0] font-semibold my-2">
@@ -109,14 +149,12 @@ const DoctorDetails = () => {
 
         <div>
           {available === "Available" ? (
-            <Link to="/myBooking">
-              <button
-                onClick={() => handleAddToLS(id)}
-                className="px-5 py-2 w-full mt-5 lg:mt-12 bg-[#176AE5] text-white rounded-full hover:bg-[#176AE5] transition duration-300 text-lg hover:cursor-pointer hover:scale-105"
-              >
-                Book Appointment Now
-              </button>
-            </Link>
+            <button
+              onClick={() => handleAddToLS(id)}
+              className="px-5 py-2 w-full mt-5 lg:mt-12 bg-[#176AE5] text-white rounded-full hover:bg-[#176AE5] transition duration-300 text-lg hover:cursor-pointer hover:scale-105"
+            >
+              Book Appointment Now
+            </button>
           ) : (
             <button
               disabled
