@@ -20,10 +20,18 @@ const Footer = () => {
         </div>
         <div className="border my-4 text-[#0F0F0F33]"></div>
         <div className="flex gap-2 justify-center items-center">
-          <img src={fb} alt="" />
-          <img src={linkedin} alt="" />
-          <img src={twitter} alt="" />
-          <img src={yt} alt="" />
+          <a href="https://www.facebook.com/devenamulshikder" target="blank">
+            <img src={fb} alt="" />
+          </a>
+          <a href="https://linkedin.com/in/enamul-shikder" target="blank">
+            <img src={linkedin} alt="" />
+          </a>
+          <a href="https://x.com/" target="blank">
+            <img src={twitter} alt="" />
+          </a>
+          <a href="https://youtube.com" target="blank">
+            <img src={yt} alt="" />
+          </a>
         </div>
       </div>
     </div>

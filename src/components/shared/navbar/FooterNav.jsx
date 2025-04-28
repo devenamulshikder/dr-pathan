@@ -28,7 +28,7 @@ const FooterNav = () => {
                 My-Bookings
               </NavLink>
               <NavLink
-                to="/45"
+                to="/blogs"
                 className={({ isActive }) =>
                   isActive
                     ? "btn btn-outline text-[#176AE5] font-bold lg:text-lg hover:bg-[#1769e52d] lg:border-b-2 border-0"

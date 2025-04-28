@@ -1,8 +1,10 @@
 import { Link } from "react-router";
+import Navbar from "../../components/shared/navbar/Navbar";
 
 const ErrorPage = () => {
   return (
     <div>
+      <Navbar/>
       <div className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
           <p className="text-3xl font-semibold text-[#176AE5]">404</p>

@@ -25,7 +25,7 @@ const Doctor = ({ doctor }) => {
             {available}
           </p>
           <p className="border border-gray-300 text-[#176AE5] bg-[#1769e537] rounded-full px-3 ">
-            {experience} +
+            {experience} + Experience
           </p>
         </div>
         <div className="card-body ml-3">
